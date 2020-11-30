@@ -2,9 +2,11 @@
 
 // BASE
 @import "./base/common";
+@import "./base/button";
 
 // COMPONENTS
 @import "./components/container";
+@import "./components/social-links";
 
 // UTILS
 @import "./utils/variables";

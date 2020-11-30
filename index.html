@@ -20,22 +20,32 @@
 
     <header class="page-header">
       <div class="container main-nav">
-        <nav>
+        <div  class="mobile-header">
           <a href="/" class="title-webstudio">
             <span class="title-web">Web</span>
             <span class="title-studio">Studio</span>
           </a>
 
-          <ul class="site-nav list">
-            <li class="item menu-list">
-              <a href="" class="link current menu-link-active">Студия</a>
-            </li>
-            <li class="item menu-list">
-              <a href="./portfolio.html" class="link">Портфолио</a>
-            </li>
-            <li class="item menu-list"><a href="" class="link">Контакты</a></li>
-          </ul>
-        </nav>
+          <button class="navigation-btn" aria-expanded="false" data-menu-button type="button">
+            <svg width="24" height="16" aria-label="Переключатель мобильного меню">
+              <use class="icon-navigation-menu" href="./img/sprite.svg#icon-navigation-menu"></use>
+              <use class="icon-navigation-close" href="./img/sprite.svg#icon-navigation-close"></use>
+            </svg>
+          </button>
+        </div>
+
+        <div class="mobile-nav" data-menu>
+          <nav class="main-nav">
+            <ul class="site-nav list">
+              <li class="item menu-list">
+                <a href="" class="site-nav-link current menu-link-active">Студия</a>
+              </li>
+              <li class="site-nav-link menu-list">
+                <a href="./portfolio.html" class="link">Портфолио</a>
+              </li>
+              <li class="site-nav-link menu-list"><a href="" class="link">Контакты</a></li>
+            </ul>
+          </nav>
 
         <!--Contacts-->
 
@@ -58,8 +68,9 @@
             </a>
           </li>
         </ul>
-      </div>
-    </header>
+        </div>
+    </div>
+  </header>
 
     <main>
       <!--Герой-->
@@ -113,7 +124,7 @@
 
       <!--Чем мы занимаемся-->
 
-      <!-- <section class="section works-container">
+      <section class="section works-container">
         <div class="container">
           <h2 class="section-title">Чем мы занимаемся</h2>
 
@@ -155,23 +166,27 @@
             </li>
           </ul>
         </div>
-      </section> -->
+      </section>
 
       <!--Наша команда-->
 
-      <!-- <section class="team section-team">
+      <section class="team section-team">
         <div class="container">
           <h2 class="team section-title">Наша команда</h2>
 
           <ul class="list team-description">
             <li class="team-list">
               <a class="team-photo" href="#!">
-                <img
-                  src="./img/igor.jpg"
-                  width="270"
-                  height="260"
-                  alt="Фото Игоря Демьяненко"
-                />
+                
+                <picture class="photo-employee">
+                  <source srcset="./img/team/igor-desktop.jpg 1x, ./img/team/igor-desktop@2x.jpg 2x"
+                    media="(min-width: 1200px)">
+                  <source srcset="./img/team/igor-tablet.jpg 1x, ./img/team/igor-tablet@2x.jpg 2x"
+                    media="(min-width: 768px)">
+                  <source srcset="./img/team/igor-mobile.jpg 1x, ./img/team/igor-mobile@2x.jpg 2x"
+                    media="(min-width: 320px)">
+                  <img src="./img/team/igor.jpg" alt="Фото Игоря Демьяненко" />
+                </picture>
               </a>
 
               <div class="team-list-item">
@@ -216,12 +231,15 @@
 
             <li class="team-list">
               <a class="team-photo" href="#!">
-                <img
-                  src="./img/olga.jpg"
-                  width="270"
-                  height="260"
-                  alt="Фото Ольги Репиной"
-                />
+                <picture class="photo-employee">
+                  <source srcset="./img/team/olga-desktop.jpg 1x, ./img/team/olga-desktop@2x.jpg 2x"
+                    media="(min-width: 1200px)">
+                  <source srcset="./img/team/olga-tablet.jpg 1x, ./img/team/olga-tablet@2x.jpg 2x"
+                    media="(min-width: 768px)">
+                  <source srcset="./img/team/olga-mobile.jpg 1x, ./img/team/olga-mobile@2x.jpg 2x"
+                    media="(min-width: 320px)">
+                  <img src="./img/team/olga.jpg" alt="Фото Ольги Репиной" />
+                </picture>
               </a>
 
               <div class="team-list-item">
@@ -266,13 +284,17 @@
 
             <li class="team-list">
               <a class="team-photo" href="#!">
-                <img
-                  src="./img/nikolay.jpg"
-                  width="270"
-                  height="260"
-                  alt="Фото Николая Тарасова"
-                />
+                <picture class="photo-employee">
+                  <source srcset="./img/team/nikolay-desktop.jpg 1x, ./img/team/nikolay-desktop@2x.jpg 2x"
+                    media="(min-width: 1200px)">
+                  <source srcset="./img/team/nikolay-tablet.jpg 1x, ./img/team/nikolay-tablet@2x.jpg 2x"
+                    media="(min-width: 768px)">
+                  <source srcset="./img/team/nikolay-mobile.jpg 1x, ./img/team/nikolay-mobile@2x.jpg 2x"
+                    media="(min-width: 320px)">
+                  <img src="./img/team/nikolay.jpg" alt="Фото Николая Тарасова" />
+                </picture>
               </a>
+
               <div class="team-list-item">
                 <h3 class="name">Николай Тарасов</h3>
                 <p lang="en" class="job-title">Marketing</p>
@@ -315,12 +337,15 @@
 
             <li class="team-list">
               <a href="#!">
-                <img
-                  src="./img/mikhail.jpg"
-                  width="270"
-                  height="260"
-                  alt="Фото Михаила Ермакова"
-                />
+                <picture class="photo-employee">
+                  <source srcset="./img/team/mikhail-desktop.jpg 1x, ./img/team/mikhail-desktop@2x.jpg 2x"
+                    media="(min-width: 1200px)">
+                  <source srcset="./img/team/mikhail-tablet.jpg 1x, ./img/team/mikhail-tablet@2x.jpg 2x"
+                    media="(min-width: 768px)">
+                  <source srcset="./img/team/mikhail-mobile.jpg 1x, ./img/team/mikhail-mobile@2x.jpg 2x"
+                    media="(min-width: 320px)">
+                  <img src="./img/team/mikhail.jpg" alt="Фото Михаила Ермакова" />
+                </picture>
               </a>
 
               <div class="team-list-item">
@@ -363,11 +388,11 @@
             </li>
           </ul>
         </div>
-      </section> -->
+      </section>
 
       <!-- Постоянные клиенты -->
 
-      <!-- <section class="section clients-container">
+      <section class="section clients-container">
         <div class="container">
           <h2 class="section-title">Постоянные клиенты</h2>
           <ul class="clients list">
@@ -421,102 +446,106 @@
           </ul>
         </div>
       </section>
-    </main> -->
+    </main>
 
     <!--Подвал-->
 
-    <!-- <footer class="footer">
-      <div class="container footer-flex">
-        <div>
-          <a href="/" class="title-webstudio title-webstudio-footer">
-            <span class="title-web">Web</span>
-            <span class="title-studio-footer">Studio</span>
-          </a>
-          <address>
-            <ul class="address list">
-              <li class="addres-footer">
-                <p class="fixed-address">г. Киев, пр-т Леси Украинки, 26</p>
-              </li>
-              <li class="addres-footer">
-                <a href="mailto:info@devstudio.com" class="contacts-footer"
-                  >info@devstudio.com
+    <footer class="footer">
+        <div class="container align-footer">
+        <div class="footer-tablet-position">
+        <div class="container footer-flex">
+          <div>
+            <a href="/" class="title-webstudio title-webstudio-footer">
+              <span class="title-web">Web</span>
+              <span class="title-studio-footer">Studio</span>
+            </a>
+            <address class="address">
+              <ul class="list">
+                <li class="addres-footer">
+                  <p class="fixed-address">г. Киев, пр-т Леси Украинки, 26</p>
+                </li>
+                <li class="addres-footer">
+                  <a href="mailto:info@devstudio.com" class="contacts-footer"
+                    >info@devstudio.com
+                  </a>
+                </li>
+
+                <li class="addres-footer">
+                  <a href="tel:+380961111111" class="contacts-footer"
+                    >+38 096 111 11 11
+                  </a>
+                </li>
+              </ul>
+            </address>
+          </div>
+
+          <div class="join">
+            <h3 class="social-title">Присоединяйтесь</h3>
+            <ul class="social-list social-list-footer list">
+              <li class="social-list-item">
+                <a href="#" class="social-list-link social-list-link-footer link">
+                  <svg class="social-list-svg social-list-svg-footer">
+                    <use href="./img/sprite.svg#icon-instagram1"></use>
+                  </svg>
                 </a>
               </li>
 
-              <li class="addres-footer">
-                <a href="tel:+380961111111" class="contacts-footer"
-                  >+38 096 111 11 11
+              <li class="social-list-item social-list-svg-footer">
+                <a href="#" class="social-list-link social-list-link-footer link">
+                  <svg class="social-list-svg social-list-svg-footer">
+                    <use href="./img/sprite.svg#icon-twitter1"></use>
+                  </svg>
+                </a>
+              </li>
+
+              <li class="social-list-item social-list-svg-footer">
+                <a href="#" class="social-list-link social-list-link-footer link">
+                  <svg class="social-list-svg social-list-svg-footer">
+                    <use href="./img/sprite.svg#icon-facebook1"></use>
+                  </svg>
+                </a>
+              </li>
+
+              <li class="social-list-item social-list-svg-footer">
+                <a href="#" class="social-list-link social-list-link-footer link">
+                  <svg class="social-list-svg social-list-svg-footer">
+                    <use href="./img/sprite.svg#icon-linkedin"></use>
+                  </svg>
                 </a>
               </li>
             </ul>
-          </address>
-        </div>
+          </div>
+          </div>
 
-        <div class="join">
-          <h3 class="social-title">Присоединяйтесь</h3>
-          <ul class="social-list social-list-footer list">
-            <li class="social-list-item">
-              <a href="#" class="social-list-link social-list-link-footer link">
-                <svg class="social-list-svg social-list-svg-footer">
-                  <use href="./img/sprite.svg#icon-instagram1"></use>
-                </svg>
-              </a>
-            </li>
-
-            <li class="social-list-item social-list-svg-footer">
-              <a href="#" class="social-list-link social-list-link-footer link">
-                <svg class="social-list-svg social-list-svg-footer">
-                  <use href="./img/sprite.svg#icon-twitter1"></use>
-                </svg>
-              </a>
-            </li>
-
-            <li class="social-list-item social-list-svg-footer">
-              <a href="#" class="social-list-link social-list-link-footer link">
-                <svg class="social-list-svg social-list-svg-footer">
-                  <use href="./img/sprite.svg#icon-facebook1"></use>
-                </svg>
-              </a>
-            </li>
-
-            <li class="social-list-item social-list-svg-footer">
-              <a href="#" class="social-list-link social-list-link-footer link">
-                <svg class="social-list-svg social-list-svg-footer">
-                  <use href="./img/sprite.svg#icon-linkedin"></use>
-                </svg>
-              </a>
-            </li>
-          </ul>
-        </div>
-
-        <div class="sign-up">
-          <h3 class="contact social-title">Подпишитесь на рассылку</h3>
-          <div class="contact-form">
-            <form class="form-footer">
-              <input
-                class="input-footer"
-                type="email"
-                name="mail"
-                id="mail"
-                placeholder="E-mail"
-              />
-              <label for="mail">
-                <button type="submit" id="email" class="button">
-                  Подписаться
-                  <svg class="icon-send" width="24" height="24">
-                    <use href="./img/sprite.svg#icon-icon-send"></use>
-                  </svg>
-                </button>
-              </label>
-            </form>
+          <div class="sign-up">
+            <h3 class="contact social-title">Подпишитесь на рассылку</h3>
+            <div class="contact-form">
+              <form class="form-footer">
+                <input
+                  class="input-footer"
+                  type="email"
+                  name="mail"
+                  id="mail"
+                  placeholder="E-mail"
+                />
+                <label for="mail">
+                  <button type="submit" id="email" class="button footer-btn">
+                    Подписаться
+                    <svg class="icon-send" width="24" height="24">
+                      <use href="./img/sprite.svg#icon-icon-send"></use>
+                    </svg>
+                  </button>
+                </label>
+              </form>
+            </div>
           </div>
         </div>
       </div>
-    </footer> -->
+    </footer>
 
     <!-- Модальное окно -->
 
-    <!-- <div class="backdrop is-hidden" data-modal>
+    <div class="backdrop is-hidden" data-modal>
       <div class="modal">
         <button type="button" class="modal-close-btn" data-modal-close>
           <svg class="modal-icon">
@@ -589,6 +618,7 @@
       </div>
     </div>
 
-    <script src="./js/modal.js"></script> -->
+    <script src="./js/modal.js"></script> 
+    <script src="./js/navigation-menu-btn.js"></script>
   </body>
 </html>
