@@ -47,10 +47,12 @@
                 url("../img/hero/hero-mobile@2x.jpg");
                 }
             }  
+}
 
+@media screen and (min-width: 480px) {
     .hero-title {
         width: 360px;
-    }
+    } 
 }
 
 // tablet //
@@ -75,6 +77,8 @@
         font-size: 26px;
         line-height: 1.615;
         }    
+
+       
     }
 
     @media screen and (min-device-pixel-ratio: 2) and (min-width: 768px),
@@ -87,10 +91,6 @@
               ), url("../img/hero/hero-tablet@2x.jpg");
           }
       } 
-
-      .hero-title {
-        width: 360px;
-    }
 }
 
 

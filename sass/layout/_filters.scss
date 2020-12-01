@@ -1,17 +1,24 @@
-.portfolio {
+.container-portfolio {
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
 
   justify-content: center;
+}
 
-  &-filters {
-    padding-top: 94px;
-    padding-bottom: 114px;
-  }
+.portfolio-filters {
+  padding-top: 60px;
+  padding-bottom: 40px;
+}
+
+.portfolio {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
 }
 
 .filters {
-  padding-bottom: 34px;
+  margin-bottom: 40px;
+
 
   font-weight: 500;
   font-size: 16px;
@@ -50,6 +57,7 @@
 
   .button-list + .button-list {
     margin-left: 8px;
+    margin-bottom: 10px;
   }
 }
 
@@ -65,8 +73,12 @@
       display: flex;
       flex-wrap: nowrap;
       justify-content: center;
-      padding-bottom: 14px;
     }
+
+    .filters {    
+      margin-bottom: 50px;
+      display: flex;
+      justify-content: center;
   }
   
   // @media screen and (min-width: 1200px) {
@@ -139,3 +151,4 @@
 //   background: #2196f3;
 //   color: $white-color;
 // }
+  }
