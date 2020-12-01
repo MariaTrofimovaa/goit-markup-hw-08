@@ -1,10 +1,11 @@
 .projects {
-  display: flex;
-  flex-wrap: wrap;
+    display: flex;
+    flex-wrap: wrap;
+  
+    background-color: $white-color;
+    font-family: Roboto, sans-serif;
+  }
 
-  background-color: $white-color;
-  font-family: Roboto, sans-serif;
-}
 
 .project-list {
   width: 370px;

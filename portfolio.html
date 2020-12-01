@@ -18,24 +18,34 @@
   <body class="page">
     <!--Шапка-->
 
-    <header class="page-header portfolio">
+    <header class="page-header">
       <div class="container main-nav">
-        <nav>
+        <div  class="mobile-header">
           <a href="/" class="title-webstudio">
-            <span class="title-web">Web</span
-            ><span class="title-studio">Studio</span>
+            <span class="title-web">Web</span>
+            <span class="title-studio">Studio</span>
           </a>
 
-          <ul class="site-nav list">
-            <li class="item">
-              <a href="./index.html" class="link">Студия</a>
-            </li>
-            <li class="item">
-              <a href="" class="link current menu-link-active">Портфолио</a>
-            </li>
-            <li class="item"><a href="" class="link">Контакты</a></li>
-          </ul>
-        </nav>
+          <button class="navigation-btn" aria-expanded="false" data-menu-button type="button">
+            <svg width="24" height="16" aria-label="Переключатель мобильного меню">
+              <use class="icon-navigation-menu" href="./img/sprite.svg#icon-navigation-menu"></use>
+              <use class="icon-navigation-close" href="./img/sprite.svg#icon-navigation-close"></use>
+            </svg>
+          </button>
+        </div>
+
+        <div class="mobile-nav" data-menu>
+          <nav class="main-nav">
+            <ul class="site-nav list">
+              <li class="item menu-list">
+                <a href="" class="site-nav-link current menu-link-active">Студия</a>
+              </li>
+              <li class="site-nav-link menu-list">
+                <a href="./portfolio.html" class="link">Портфолио</a>
+              </li>
+              <li class="site-nav-link menu-list"><a href="" class="link">Контакты</a></li>
+            </ul>
+          </nav>
 
         <!--Contacts-->
 
@@ -54,27 +64,52 @@
               <svg class="contacts-svg">
                 <use href="./img/sprite.svg#icon-smartphone"></use>
               </svg>
-              <span>+38 096 111 11 11</span></a
-            >
+              <span>+38 096 111 11 11</span>
+            </a>
           </li>
         </ul>
-      </div>
-    </header>
+        </div>
+    </div>
+  </header>
 
     <main>
       <!-- <h1>Портфолио</h1> -->
 
-      <section class="section portfolio">
-        <div class="container portfolio-content">
+      <section class="section portfolio-filters">
+        <div class="container portfolio">
           <div class="filters">
-            <ul class="filters-list list">
-              <li class="filters-btn"><button type="button" class="button">Все</button></li>
-              <li class="filters-btn"><button type="button" class="button">Веб-сайты</button></li>
-              <li class="filters-btn"><button type="button" class="button">Приложения</button></li>
-              <li class="filters-btn"><button type="button" class="button">Дизайн</button></li>
-              <li class="filters-btn"><button type="button" class="button">Маркетинг</button></li>
+            <ul class="list portfolio">
+              <li class="button-list">
+                <a href="/">
+                  <button type="button" class="filters-list active">Все</button>
+                </a>
+              </li>
+
+              <li class="button-list">
+                <a href="/">
+                  <button type="button" class="filters-list">Веб-сайты</button>
+                </a>
+              </li>
+
+              <li class="button-list">
+                <a href="/">
+                  <button type="button" class="filters-list">Приложения</button>
+                </a>
+              </li>
+
+              <li class="button-list">
+                <a href="/">
+                  <button type="button" class="filters-list">Дизайн</button>
+                </a>
+              </li>
+              <li class="button-list">
+                <a href="/">
+                  <button type="button" class="filters-list">Маркетинг</button>
+                </a>
+              </li>
             </ul>
           </div>
+
 
           <ul class="projects list">
             <li class="project-list">
@@ -87,12 +122,18 @@
                       цифрового шпионажа и атак на защищённые сервера
                       конкурентов.
                     </p>
-                    <img
-                      width="370"
-                      height="294"
-                      src="./img/img_4.jpg"
-                      alt="Фото команды на ноутбуке"
-                    />
+
+                    <picture>
+                      <source
+                        srcset="./img/portfolio/project-desktop1.jpg 1x, ./images/portfolio/project-desktop1@2x.jpg 2x"
+                        media="(min-width: 1200px)">
+                      <source srcset="./img/portfolio/project-tablet1.jpg 1x, ./images/portfolio/project-tablet1@2x.jpg 2x"
+                        media="(min-width: 768px)">
+                      <source srcset="./img/portfolio/project-mobile1.jpg 1x, ./images/portfolio/project-mobile1@2x.jpg 2x"
+                        media="(min-width: 320px)">
+                      <img src="./img/portfolio/project1.jpg" alt="Ноутбук" />
+                    </picture>
+
                   </div>
                   <div class="card-content">
                     <h2 class="projects-list-title">Технокряк</h2>
@@ -112,12 +153,18 @@
                       цифрового шпионажа и атак на защищённые сервера
                       конкурентов.
                     </p>
-                    <img
-                      width="370"
-                      height="294"
-                      src="./img/img_5.jpg"
-                      alt="Постер New Orlean vs Golden Stars"
-                    />
+
+                    <picture>
+                      <source
+                        srcset="./img/portfolio/project-desktop2.jpg 1x, ./images/portfolio/project-desktop2@2x.jpg 2x"
+                        media="(min-width: 1200px)">
+                      <source srcset="./img/portfolio/project-tablet2.jpg 1x, ./images/portfolio/project-tablet2@2x.jpg 2x"
+                        media="(min-width: 768px)">
+                      <source srcset="./img/portfolio/project-mobile2.jpg 1x, ./images/portfolio/project-mobile2@2x.jpg 2x"
+                        media="(min-width: 320px)">
+                      <img src="./img/portfolio/project2.jpg" alt="Постер" />
+                    </picture>
+
                   </div>
                   <div class="card-content">
                     <h2 class="projects-list-title">
@@ -138,12 +185,18 @@
                     коронавируса. Компании используют эту платформу для
                     цифрового шпионажа и атак на защищённые сервера конкурентов.
                   </p>
-                  <img
-                    width="370"
-                    height="294"
-                    src="./img/img_6.jpg"
-                    alt="Лого ресторана Seafood"
-                  />
+                  
+                  <picture>
+                    <source
+                      srcset="./img/portfolio/project-desktop3.jpg 1x, ./images/portfolio/project-desktop3@2x.jpg 2x"
+                      media="(min-width: 1200px)">
+                    <source srcset="./img/portfolio/project-tablet3.jpg 1x, ./images/portfolio/project-tablet3@2x.jpg 2x"
+                      media="(min-width: 768px)">
+                    <source srcset="./img/portfolio/project-mobile3.jpg 1x, ./images/portfolio/project-mobile3@2x.jpg 2x"
+                      media="(min-width: 320px)">
+                    <img src="./img/portfolio/project3.jpg" alt="Ресторан" />
+                  </picture>
+
                 </div>
                 <div class="card-content">
                   <h2 class="projects-list-title">Ресторан Seafood</h2>
@@ -162,12 +215,18 @@
                       цифрового шпионажа и атак на защищённые сервера
                       конкурентов.
                     </p>
-                    <img
-                      width="370"
-                      height="294"
-                      src="./img/img_7.jpg"
-                      alt="Наушники на белом фоне"
-                    />
+                    
+                    <picture>
+                      <source
+                        srcset="./img/portfolio/project-desktop4.jpg 1x, ./images/portfolio/project-desktop4@2x.jpg 2x"
+                        media="(min-width: 1200px)">
+                      <source srcset="./img/portfolio/project-tablet4.jpg 1x, ./images/portfolio/project-tablet4@2x.jpg 2x"
+                        media="(min-width: 768px)">
+                      <source srcset="./img/portfolio/project-mobile4.jpg 1x, ./images/portfolio/project-mobile4@2x.jpg 2x"
+                        media="(min-width: 320px)">
+                      <img src="./img/portfolio/project4.jpg" alt="Проект Prime" />
+                    </picture>
+
                   </div>
                   <div class="card-content">
                     <h2 class="projects-list-title">Проект Prime</h2>
@@ -187,12 +246,18 @@
                       цифрового шпионажа и атак на защищённые сервера
                       конкурентов.
                     </p>
-                    <img
-                      width="370"
-                      height="294"
-                      src="./img/img_8.jpg"
-                      alt="2 коробки"
-                    />
+                    
+                    <picture>
+                      <source
+                        srcset="./img/portfolio/project-desktop5.jpg 1x, ./images/portfolio/project-desktop5@2x.jpg 2x"
+                        media="(min-width: 1200px)">
+                      <source srcset="./img/portfolio/project-tablet5.jpg 1x, ./images/portfolio/project-tablet5@2x.jpg 2x"
+                        media="(min-width: 768px)">
+                      <source srcset="./img/portfolio/project-mobile5.jpg 1x, ./images/portfolio/project-mobile5@2x.jpg 2x"
+                        media="(min-width: 320px)">
+                      <img src="./img/portfolio/project5.jpg" alt="Boxes" />
+                    </picture>
+
                   </div>
                   <div class="card-content">
                     <h2 class="projects-list-title">Проект Boxes</h2>
@@ -212,12 +277,18 @@
                       цифрового шпионажа и атак на защищённые сервера
                       конкурентов.
                     </p>
-                    <img
-                      width="370"
-                      height="294"
-                      src="./img/img_9.jpg"
-                      alt="Монитор"
-                    />
+
+                    <picture>
+                      <source
+                        srcset="./img/portfolio/project-desktop6.jpg 1x, ./images/portfolio/project-desktop6@2x.jpg 2x"
+                        media="(min-width: 1200px)">
+                      <source srcset="./img/portfolio/project-tablet6.jpg 1x, ./images/portfolio/project-tablet6@2x.jpg 2x"
+                        media="(min-width: 768px)">
+                      <source srcset="./img/portfolio/project-mobile6.jpg 1x, ./images/portfolio/project-mobile6@2x.jpg 2x"
+                        media="(min-width: 320px)">
+                      <img src="./img/portfolio/project6.jpg" alt="Screen" />
+                    </picture>
+
                   </div>
                   <div class="card-content">
                     <h2>Inspiration has no Borders</h2>
@@ -237,12 +308,18 @@
                       цифрового шпионажа и атак на защищённые сервера
                       конкурентов.
                     </p>
-                    <img
-                      width="370"
-                      height="294"
-                      src="./img/img_10.jpg"
-                      alt="Разворот журнала"
-                    />
+                  
+                    <picture>
+                      <source
+                        srcset="./img/portfolio/project-desktop7.jpg 1x, ./images/portfolio/project-desktop7@2x.jpg 2x"
+                        media="(min-width: 1200px)">
+                      <source srcset="./img/portfolio/project-tablet7.jpg 1x, ./images/portfolio/project-tablet7@2x.jpg 2x"
+                        media="(min-width: 768px)">
+                      <source srcset="./img/portfolio/project-mobile7.jpg 1x, ./images/portfolio/project-mobile7@2x.jpg 2x"
+                        media="(min-width: 320px)">
+                      <img src="./img/portfolio/project7.jpg" alt="Book" />
+                    </picture>
+
                   </div>
                   <div class="card-content">
                     <h2 class="projects-list-title">Издание Limited Edition</h2>
@@ -262,12 +339,18 @@
                       цифрового шпионажа и атак на защищённые сервера
                       конкурентов.
                     </p>
-                    <img
-                      width="370"
-                      height="294"
-                      src="./img/img_11.jpg"
-                      alt="Бирка с надписью Lab El Tag"
-                    />
+                    
+                    <picture>
+                      <source
+                        srcset="./img/portfolio/project-desktop8.jpg 1x, ./images/portfolio/project-desktop8@2x.jpg 2x"
+                        media="(min-width: 1200px)">
+                      <source srcset="./img/portfolio/project-tablet8.jpg 1x, ./images/portfolio/project-tablet8@2x.jpg 2x"
+                        media="(min-width: 768px)">
+                      <source srcset="./img/portfolio/project-mobile8.jpg 1x, ./images/portfolio/project-mobile8@2x.jpg 2x"
+                        media="(min-width: 320px)">
+                      <img src="./img/portfolio/project8.jpg" alt="LAB" />
+                    </picture>
+
                   </div>
                   <div class="card-content">
                     <h2 class="projects-list-title">Проект LAB</h2>
@@ -286,13 +369,18 @@
                     коронавируса. Компании используют эту платформу для
                     цифрового шпионажа и атак на защищённые сервера конкурентов.
                   </p>
-                  <img
-                    width="370"
-                    height="294"
-                    src="./img/img_12.jpg"
-                    alt="Руки на клавиатуре ноутбуке"
-                  />
-                </div>
+                  
+                  <picture>
+                    <source
+                      srcset="./img/portfolio/project-desktop9.jpg 1x, ./images/portfolio/project-desktop9@2x.jpg 2x"
+                      media="(min-width: 1200px)">
+                    <source srcset="./img/portfolio/project-tablet9.jpg 1x, ./images/portfolio/project-tablet9@2x.jpg 2x"
+                      media="(min-width: 768px)">
+                    <source srcset="./img/portfolio/project-mobile9.jpg 1x, ./images/portfolio/project-mobile9@2x.jpg 2x"
+                      media="(min-width: 320px)">
+                    <img src="./img/portfolio/project9.jpg" alt="Notebook" />
+                  </picture>
+
                 <div class="card-content">
                   <h2 class="projects-list-title">Growing Business</h2>
                   <p class="projects-list-info">Приложение</p>
@@ -307,14 +395,16 @@
     <!--Подвал-->
 
     <footer class="footer">
+      <div class="container align-footer">
+      <div class="footer-tablet-position">
       <div class="container footer-flex">
         <div>
           <a href="/" class="title-webstudio title-webstudio-footer">
             <span class="title-web">Web</span>
             <span class="title-studio-footer">Studio</span>
           </a>
-          <address>
-            <ul class="address list">
+          <address class="address">
+            <ul class="list">
               <li class="addres-footer">
                 <p class="fixed-address">г. Киев, пр-т Леси Украинки, 26</p>
               </li>
@@ -369,6 +459,7 @@
             </li>
           </ul>
         </div>
+        </div>
 
         <div class="sign-up">
           <h3 class="contact social-title">Подпишитесь на рассылку</h3>
@@ -382,7 +473,7 @@
                 placeholder="E-mail"
               />
               <label for="mail">
-                <button type="submit" id="email" class="button">
+                <button type="submit" id="email" class="button footer-btn">
                   Подписаться
                   <svg class="icon-send" width="24" height="24">
                     <use href="./img/sprite.svg#icon-icon-send"></use>
@@ -393,6 +484,8 @@
           </div>
         </div>
       </div>
-    </footer>
+    </div>
+  </footer>
+
   </body>
 </html>

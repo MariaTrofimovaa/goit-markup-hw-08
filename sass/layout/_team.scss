@@ -29,19 +29,27 @@
     color: $primary-text-color;
   }
 }
+
 .team-list-item .job-title {
-    margin-bottom: 16px;
     font-weight: normal;
     font-size: 16px;
     line-height: 1.188;
     text-align: center;
     letter-spacing: 0.03em;
 
-    color: $secondary-text-color;
+    color: $paragraph-color;
+  }
+
+  .social-list {
+    display: flex;
+    justify-content: center;
+    padding-top: 16px;
+    padding-bottom: 24px;
   }
   
+  
 .team-list {
-    padding-bottom: 24px;
+    // padding-bottom: 24px;
     max-width: 450px;
   
     background-color: $white-color;
@@ -63,7 +71,10 @@
       .team-list {
         margin: 15px;
         width: calc((100% - 4 * 15px) / 2);
-      }
+        
+      .team-list:not(:nth-last-child(-n-2)) {
+        margin-bottom: 0;
+      }    
     }
   }
 
@@ -185,4 +196,4 @@
 //   &-link:focus &-svg {
 //     fill: $white-color;
 //   }
-// }
+}

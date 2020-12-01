@@ -14,12 +14,20 @@
   text-decoration: none;
 }
 
+body.modal-open {
+  overflow: hidden;
+}
+
 .list {
   margin: 0;
   padding: 0;
   list-style: none;
   font-style: normal;
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.link {
+  list-style: none;
 }
 
 img {
@@ -261,7 +269,8 @@ img {
 .social-list {
   display: flex;
   justify-content: center;
-  padding-block: 30px;
+  padding-top: 16px;
+  padding-bottom: 24px;
 }
 
 .social-list-link {
@@ -391,24 +400,6 @@ img {
   fill: #2196f3;
 }
 
-.mobile-nav {
-  display: none;
-  z-index: 1;
-  position: absolute;
-  padding: 60px 0;
-  top: 100%;
-  left: 0;
-  width: 100%;
-  height: 393px;
-  text-align: center;
-  background: #ffffff;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.04), 0px 2px 4px rgba(0, 0, 0, 0.08), 0px 1px 3px rgba(0, 0, 0, 0.16);
-}
-
-.mobile-nav.is-open {
-  display: block;
-}
-
 .site-nav {
   margin-bottom: 60px;
 }
@@ -467,8 +458,8 @@ img {
   line-height: 1.167;
   letter-spacing: 0.02em;
   text-decoration: none;
-  fill: rgba(255, 255, 255, 0.6);
-  color: rgba(255, 255, 255, 0.6);
+  fill: #757575;
+  color: #757575;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -482,18 +473,36 @@ img {
   margin-right: 10px;
 }
 
+@media screen and (max-width: 768px) {
+  .mobile-nav {
+    display: none;
+    z-index: 1;
+    position: absolute;
+    padding: 60px 0;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 393px;
+    text-align: center;
+    background: #ffffff;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.04), 0px 2px 4px rgba(0, 0, 0, 0.08), 0px 1px 3px rgba(0, 0, 0, 0.16);
+  }
+  .mobile-nav.is-open {
+    display: block;
+  }
+}
+
 @media screen and (min-width: 768px) {
+  .main-nav {
+    display: flex;
+    width: 100%;
+    height: 80px;
+  }
   .page-header {
-    position: relative;
     padding: 21px 0;
   }
   .navigation-btn {
     display: none;
-  }
-  .main-nav {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
   }
   .title-webstudio {
     margin-right: 88px;
@@ -655,7 +664,7 @@ img {
   text-transform: uppercase;
 }
 
-.item {
+.features-item {
   justify-content: center;
 }
 
@@ -687,7 +696,7 @@ img {
     font-size: 14px;
     line-height: 1.142;
   }
-  .item::before {
+  .features-item::before {
     display: block;
     content: "";
     height: 120px;
@@ -698,7 +707,7 @@ img {
     background-size: cover;
     background-position: center;
   }
-  .item:not(:last-child) {
+  .features-item:not(:last-child) {
     margin-bottom: 30px;
   }
   .item-antenna::before {
@@ -726,11 +735,11 @@ img {
     margin: -15px;
     justify-content: space-between;
   }
-  .features .item {
+  .features .features-item {
     width: calc((100% - 4 * 15px) / 2);
     margin: 15px;
   }
-  .features .item:nth-child(-n-2n) {
+  .features .features-item:nth-child(-n-2n) {
     margin-bottom: 0;
   }
   .features-list {
@@ -751,7 +760,7 @@ img {
     font-size: 14px;
     line-height: 1.142;
   }
-  .item::before {
+  .features-item::before {
     display: block;
     content: "";
     height: 120px;
@@ -788,7 +797,7 @@ img {
   .features-list {
     padding: 94px 0;
   }
-  .features .item {
+  .features .features-item {
     width: 270px;
   }
 }
@@ -871,17 +880,22 @@ img {
 }
 
 .team-list-item .job-title {
-  margin-bottom: 16px;
   font-weight: normal;
   font-size: 16px;
   line-height: 1.188;
   text-align: center;
   letter-spacing: 0.03em;
-  color: rgba(255, 255, 255, 0.6);
+  color: #757575;
+}
+
+.social-list {
+  display: flex;
+  justify-content: center;
+  padding-top: 16px;
+  padding-bottom: 24px;
 }
 
 .team-list {
-  padding-bottom: 24px;
   max-width: 450px;
   background-color: #ffffff;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -902,9 +916,12 @@ img {
     margin: 15px;
     width: calc((100% - 4 * 15px) / 2);
   }
+  .list .team-list .team-list:not(:nth-last-child(-n-2)) {
+    margin-bottom: 0;
+  }
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 768px) and (min-width: 1200px) {
   .team {
     padding: 94px 0;
   }
@@ -1016,7 +1033,6 @@ img {
 
 .title-webstudio {
   display: inline-block;
-  margin-bottom: 20px;
   font-family: Raleway, sans-serif;
   font-weight: bold;
   font-size: 24px;
@@ -1177,6 +1193,7 @@ img {
   }
   .container .title-webstudio-footer {
     margin-right: 0;
+    margin-bottom: 20px;
   }
   .title-studio-footer {
     color: #ffffff;

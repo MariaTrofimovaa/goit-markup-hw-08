@@ -11,7 +11,6 @@
 
   .title-webstudio {
     display: inline-block;
-    margin-bottom: 20px;
   
     font-family: Raleway, sans-serif;
     font-weight: bold;
@@ -193,6 +192,7 @@
             
             .container .title-webstudio-footer {
               margin-right: 0;
+              margin-bottom: 20px;
             }
             .title-studio-footer {
               color: $white-color;
