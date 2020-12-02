@@ -56,7 +56,7 @@
 
   &-btn {
     position: absolute;
-    top: 90%;
+    top: 93%;
     left: 50%;
     transform: translate(-50%, -50%);
 
@@ -89,17 +89,26 @@
 }
 
 .modal-title {
-  margin-bottom: 12px;
-  font-weight: bold;
-  font-size: 20px;
-  line-height: 23px;
-  text-align: center;
+  font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 1.15;
+    text-align: center;
+    letter-spacing: 0.03em;
+    margin-bottom: 12px;
+    color: #212121;
 }
 
 .contact-form-policy-label {
-  display: flex;
-  align-items: center;
-  font-size: 12px;
+  // display: inline-block;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 1.714;
+    color: $primary-text-color;
 
   &::before {
     content: "";
@@ -107,19 +116,21 @@
     width: 16px;
     height: 15px;
     background-image: url("../img/outline.svg");
-    margin-right: 10px;
+    margin-right: 8px;
 
+    background-position: center;
+    background-repeat: no-repeat;
     background-position: center;
   }
 }
 
 .form-checkbox {
-  display: inline-block;
-  justify-content: center;
+  display: flex;
+  // justify-content: center;
   align-items: center;
 
-  font-size: 14px;
-  line-height: 0.58;
+  font-size: 12px;
+  line-height: 1.171;
   letter-spacing: 0.03em;
 
   color: $paragraph-color;
@@ -138,8 +149,8 @@
 
 .checkbox-conditions {
   display: inline-block;
-  font-size: 14px;
-  line-height: 0.58;
+  font-size: 11px;
+  line-height: 1.171;
   letter-spacing: 0.03em;
 
   text-decoration-line: underline;

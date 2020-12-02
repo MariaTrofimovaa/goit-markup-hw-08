@@ -1,8 +1,4 @@
 .title-webstudio-header {
-  margin-right: 88px;
-  display: inline-block;
-  width: 145px;
-  
   font-family: Raleway, sans-serif;
   font-weight: bold;
   font-size: 24px;
@@ -150,11 +146,16 @@
   margin-right: 10px;
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (min-width:320px) and (max-width: 480px) {
   .contacts-item {
     display: flex;
     justify-content: center;
     align-items: center;
+  }
+
+  .title-webstudio-header {
+    display: inline-block;
+    // width: 134px;
   }
 }
 
@@ -185,6 +186,18 @@
 }
 
 @media screen and (min-width: 768px) {
+  .container {
+    max-width: 768px;
+    margin: 0 auto;
+    padding: 0 15px;
+  }
+  
+  .title-webstudio-header {
+    margin-right: 88px;
+    display: inline-block;
+    width: 134px;
+  }
+
   .site-nav-link {
     font-size: 14px;
     line-height: 1.142;
@@ -216,7 +229,7 @@
       justify-content: space-between;
       align-items: center;
       position: static;
-      padding: 0;
+      padding: 0 15px;
       height: auto;
       box-shadow: none;
     }
@@ -261,8 +274,21 @@
 
 
   @media screen and (min-width: 1200px) {
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 15px;
+    }
+
   .header {
     padding: 24px 0 25px 0;
+  }
+
+  .title-webstudio-header {
+    margin-right: 93px;
+    display: inline-block;
+    width: 145px;
   }
 
   .site-nav {

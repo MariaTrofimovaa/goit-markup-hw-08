@@ -72,12 +72,14 @@ img {
 
 .modal {
   position: absolute;
-  top: 50%;
   left: 50%;
+  top: 50%;
   transform: translate(-50%, -50%);
-  width: 528px;
-  min-height: 581px;
-  background-color: #ffffff;
+  width: calc(100% - 2*15px);
+  max-width: 450px;
+  max-height: 609px;
+  margin: 93px 0;
+  background: #FFFFFF;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
 }
@@ -98,6 +100,13 @@ img {
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
+}
+
+@media screen and (min-width: 1200px) {
+  .modal {
+    width: 528px;
+    height: 581px;
+  }
 }
 
 .modal-form {
@@ -159,7 +168,7 @@ img {
 
 .modal-form-btn {
   position: absolute;
-  top: 90%;
+  top: 93%;
   left: 50%;
   transform: translate(-50%, -50%);
   width: 200px;
@@ -189,17 +198,25 @@ img {
 }
 
 .modal-title {
-  margin-bottom: 12px;
+  font-style: normal;
   font-weight: bold;
   font-size: 20px;
-  line-height: 23px;
+  line-height: 1.15;
   text-align: center;
+  letter-spacing: 0.03em;
+  margin-bottom: 12px;
+  color: #212121;
 }
 
 .contact-form-policy-label {
+  width: 100%;
   display: flex;
   align-items: center;
-  font-size: 12px;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 1.714;
+  color: #212121;
 }
 
 .contact-form-policy-label::before {
@@ -208,16 +225,17 @@ img {
   width: 16px;
   height: 15px;
   background-image: url("../img/outline.svg");
-  margin-right: 10px;
+  margin-right: 8px;
+  background-position: center;
+  background-repeat: no-repeat;
   background-position: center;
 }
 
 .form-checkbox {
-  display: inline-block;
-  justify-content: center;
+  display: flex;
   align-items: center;
-  font-size: 14px;
-  line-height: 0.58;
+  font-size: 12px;
+  line-height: 1.171;
   letter-spacing: 0.03em;
   color: #757575;
 }
@@ -235,8 +253,8 @@ img {
 
 .checkbox-conditions {
   display: inline-block;
-  font-size: 14px;
-  line-height: 0.58;
+  font-size: 11px;
+  line-height: 1.171;
   letter-spacing: 0.03em;
   text-decoration-line: underline;
   color: #2196f3;
@@ -348,9 +366,6 @@ img {
 }
 
 .title-webstudio-header {
-  margin-right: 88px;
-  display: inline-block;
-  width: 145px;
   font-family: Raleway, sans-serif;
   font-weight: bold;
   font-size: 24px;
@@ -487,11 +502,14 @@ img {
   margin-right: 10px;
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (min-width: 320px) and (max-width: 480px) {
   .contacts-item {
     display: flex;
     justify-content: center;
     align-items: center;
+  }
+  .title-webstudio-header {
+    display: inline-block;
   }
 }
 
@@ -519,6 +537,16 @@ img {
 }
 
 @media screen and (min-width: 768px) {
+  .container {
+    max-width: 768px;
+    margin: 0 auto;
+    padding: 0 15px;
+  }
+  .title-webstudio-header {
+    margin-right: 88px;
+    display: inline-block;
+    width: 134px;
+  }
   .site-nav-link {
     font-size: 14px;
     line-height: 1.142;
@@ -543,7 +571,7 @@ img {
     justify-content: space-between;
     align-items: center;
     position: static;
-    padding: 0;
+    padding: 0 15px;
     height: auto;
     box-shadow: none;
   }
@@ -574,8 +602,18 @@ img {
 }
 
 @media screen and (min-width: 1200px) {
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+  }
   .header {
     padding: 24px 0 25px 0;
+  }
+  .title-webstudio-header {
+    margin-right: 93px;
+    display: inline-block;
+    width: 145px;
   }
   .site-nav .current::after {
     bottom: -28px;
@@ -1173,7 +1211,23 @@ img {
   background-color: rgba(255, 255, 255, 0.1);
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (min-width: 320px) and (max-width: 479px) {
+  .footer-tablet-position {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .align-footer {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+  .input-footer {
+    margin-bottom: 20px;
+  }
+}
+
+@media screen and (min-width: 480px) and (max-width: 767px) {
   .social-title {
     display: flex;
     justify-content: center;
